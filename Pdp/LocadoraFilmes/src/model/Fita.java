@@ -1,39 +1,25 @@
 package model;
 
 public class Fita {
-	  public static final int NORMAL = 0;
-	  public static final int LANÇAMENTO = 1;
-	  public static final int INFANTIL = 2;
+	  private TIPO tipo;
 	  private String título;
 	  private int códigoDePreço;
 
-	  public Fita(String título, int códigoDePreço) {
+	  public Fita(String título, TIPO tipo) {
 	    this.título = título;
-	    this.códigoDePreço = códigoDePreço;
+	    this.tipo = tipo;
 	  }
 	  public String getTítulo() {
 	    return título;
 	  }
-	  public int getCódigoDePreço() {
-	    return códigoDePreço;
-	  }
-	  public void setCódigoDePreço(int códigoDePreço) {
-	    this.códigoDePreço = códigoDePreço;
-	  }
-	  public boolean testarLançamento(){
-	  	if(this.getCódigoDePreço() == LANÇAMENTO)
-	  		return true;
-	  	return false;
-	  }
-	  public boolean testarNormal(){
-	  	if(this.getCódigoDePreço() == NORMAL)
-	  		return true;
-	  	return false;
-	  }
-	  public boolean testarInfantil(){
-	  	if(this.getCódigoDePreço() == INFANTIL)
-	  		return true;
-	  	return false;
-	  }
+
+	public TIPO getTipo() {
+		return tipo;
+	}
+	public void setTipo(TIPO tipo){
+	  	this.tipo = tipo;
+	}
+
+
 	}
 
