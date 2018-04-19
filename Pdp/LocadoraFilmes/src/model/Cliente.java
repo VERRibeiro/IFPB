@@ -23,15 +23,12 @@ public class Cliente {
     String resultado = "Registro de Alugueis de " + getNome() + fimDeLinha;
     while(alugueis.hasNext()) {
       Aluguel cada = (Aluguel)alugueis.next();
-      // determina valores para cada linha
-
       // trata de pontos de alugador frequente
       pontosDeAlugadorFrequente++;
       // adiciona bonus para aluguel de um lançamento por pelo menos 2 dias
       if(cada.testarAlugadorFrequente()) {
          pontosDeAlugadorFrequente++;
       }
-
       // mostra valores para este aluguel
       resultado += "\t" + cada.getFitaName() + "\t" + cada.valorParcial() + fimDeLinha;
       valorTotal += cada.valorParcial();

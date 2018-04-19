@@ -20,14 +20,20 @@ public class Fita {
 	  public void setCódigoDePreço(int códigoDePreço) {
 	    this.códigoDePreço = códigoDePreço;
 	  }
-	  public void lançamento() {
-		  
+	  public boolean testarLançamento(){
+	  	if(this.getCódigoDePreço() == LANÇAMENTO)
+	  		return true;
+	  	return false;
 	  }
-	  public void normal() {
-		  
+	  public boolean testarNormal(){
+	  	if(this.getCódigoDePreço() == NORMAL)
+	  		return true;
+	  	return false;
 	  }
-	  public void infantil() {
-		  
+	  public boolean testarInfantil(){
+	  	if(this.getCódigoDePreço() == INFANTIL)
+	  		return true;
+	  	return false;
 	  }
 	}
 
